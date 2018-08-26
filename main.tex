@@ -8,7 +8,11 @@
 {0pt}                          % How much space exists between the prefix and the title
 {\centering \quad}    % How the section is represented
 
+\newcounter{taskcounter}[subsection]
+
 \begin{document}
+	\newcommand{\task}{\stepcounter{taskcounter}\subsubsection{Задача \thetaskcounter}}
+	\newcommand{\solution}{\subsubsection*{Решение}}
 	
 	\tableofcontents
 	
